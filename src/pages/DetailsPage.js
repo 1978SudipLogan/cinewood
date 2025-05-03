@@ -44,7 +44,7 @@ const DetailsPage = () => {
               alt=""
               className="w-full h-auto rounded border"
             />
-            <button onClick={()=>handleVideo(data)} className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black font-medium py-2 px-4 rounded">
+            <button onClick={()=>handleVideo(data)} className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black font-medium py-2 px-4 rounded ">
               Play Now
             </button>
           </div>
@@ -132,7 +132,7 @@ const DetailsPage = () => {
             )}
           </div>
         </div>
-        {/* Recommended Movies */}
+       
         {/* RECOMMENDED MOVIES */}
 <div className="mt-16">
   <p className="text-2xl font-medium mb-4">Recommended Movies:</p>

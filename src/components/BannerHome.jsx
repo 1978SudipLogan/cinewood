@@ -6,6 +6,7 @@ import '../App.css'
 
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BannerHome = () => {
   const bannerHome = useSelector((state) => state.moviflix.bannerData);
@@ -114,18 +115,12 @@ const BannerHome = () => {
                 <Typography>View: {ele.vote_count}</Typography>
               </div>
               <div className="flex ">
-                <Button
-                  variant="contained"
-                  href="#contained-buttons"
-                  sx={{
-                    marginTop: "10px",
-                    backgroundColor: "white",
-                    color: "blue",
-                    fontWeight: "1em",
-                  }}
+                <Link
+                to={"/"+ele.media_type+"/"+ele.id}
+                  className="bg-white text-black rounded mt-3 flex justify-center items-center px-3 font-normal transition-bg duration-300 hover:bg-neutral-400"
                 >
                   Play Now
-                </Button>
+                </Link>
 
                 <div
                   className="items-center mx-auto mt-3 flex text-white "
@@ -182,18 +177,12 @@ const BannerHome = () => {
                 </Typography>
               </div>
               <div className="flex justify-between">
-                <Button
-                  variant="contained"
-                  href="#contained-buttons"
-                  sx={{
-                    marginTop: "4px",
-                    backgroundColor: "white",
-                    color: "red",
-                    fontWeight: "bold",
-                  }}
-                >
+                <Link
+                 to={"/"+ele.media_type+"/"+ele.id}
+                 className="bg-white text-black rounded mt-3 flex justify-center items-center px-3 py-2 font-normal transition-bg duration-300 hover:bg-neutral-400"
+                 >
                   Play Now
-                </Button>
+                </Link>
                 <div
                   className="lg:hidden items-center flex text-white  "
                   style={{ fontSize: "30px" }}
