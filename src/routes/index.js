@@ -25,7 +25,7 @@ const router=createBrowserRouter([{
         element: <Search/>
     },
     {
-        path:"moviewood",
+        path:"cinewood",
         element:<Home/>
     }
     // {
