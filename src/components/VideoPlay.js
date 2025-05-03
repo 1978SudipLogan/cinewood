@@ -4,7 +4,7 @@ import useVideo from '../hooks/useVideo';
 
 const VideoPlay = ({ data, close, media_type }) => {
   const { video } = useVideo(media_type, data.id);
-  console.log("video data: ", video);
+  
 
   return (
     <section className="fixed inset-0 z-40 bg-neutral-700 bg-opacity-70 flex justify-center items-center px-4">
