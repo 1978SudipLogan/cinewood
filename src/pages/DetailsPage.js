@@ -120,7 +120,7 @@ const DetailsPage = () => {
                         : 'https://via.placeholder.com/150x225?text=No+Image'
                     }
                     alt={item.title || item.name}
-                    className="rounded-md shadow-md w-full h-60 object-cover"
+                    className="rounded-md shadow-md w-full h-80 object-cover"
                   />
                   <p className="text-sm mt-2 text-white truncate">
                     {item.title || item.name}
@@ -147,7 +147,7 @@ const DetailsPage = () => {
                 : 'https://via.placeholder.com/150x225?text=No+Image'
             }
             alt={item.title || item.name}
-            className="rounded-md shadow-md w-full h-60 object-cover"
+            className="rounded-md shadow-md w-full h-80 object-cover"
           />
           <p className="text-sm mt-2 text-white truncate">
             {item.title || item.name}
