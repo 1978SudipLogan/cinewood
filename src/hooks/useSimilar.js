@@ -16,7 +16,7 @@ const useSimilar = (category, endpoint) => {
           },
         }
       );
-      console.log('useSimilar:', response.data.results);
+     
       setSimilar(response.data);
     } catch (error) {
       console.log('Error:', error);

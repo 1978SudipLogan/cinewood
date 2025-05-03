@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import useFetch from '../hooks/useFetch';
 import useCredits from '../hooks/useCredits';
 import useSimilar from '../hooks/useSimilar';
 import useRecommended from '../hooks/useRecommended';
+import VideoPlay from '../components/VideoPlay';
 
 const DetailsPage = () => {
+  const[playVideo,setPlayVideo]=useState(false);
+  const[playVideoId,setPlayVideoId]=useState("");
   const param = useParams();
   const { data, trendingImage } = useFetch(param.explore, param.id);
   const { member, memberImage } = useCredits(param.explore, param.id);
   const { similar, similarImage } = useSimilar(param.explore, param.id);
   const{recommend,recommendImage}=useRecommended(param.explore,param.id)
-  console.log(recommend);
+  
+
+  const handleVideo=(data)=>{
+    setPlayVideoId(data)
+    setPlayVideo(true)
+  }
 
   return (
     <div className="text-white relative w-full min-h-screen bg-black">
@@ -36,7 +44,7 @@ const DetailsPage = () => {
               alt=""
               className="w-full h-auto rounded border"
             />
-            <button className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black font-medium py-2 px-4 rounded">
+            <button onClick={()=>handleVideo(data)} className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black font-medium py-2 px-4 rounded">
               Play Now
             </button>
           </div>
@@ -151,6 +159,11 @@ const DetailsPage = () => {
     )}
   </div>
 </div>
+{
+  playVideo && (
+<VideoPlay data={playVideoId} close={()=>setPlayVideo(false)} media_type={param.explore}/>
+  )
+}
 
       </div>
     </div>

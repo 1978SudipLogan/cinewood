@@ -14,7 +14,7 @@ const fetchCredit=async ()=>{
               api_key: "0d50bc767391994a3e42ce9d3b9cdd10",
             },
           });
-          console.log("usecredit : ",response.data);
+        
           setMember(response.data)
     }
   
