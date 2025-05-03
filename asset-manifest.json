@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cinewood/static/css/main.e539b1f2.css",
-    "main.js": "/cinewood/static/js/main.4a928211.js",
+    "main.js": "/cinewood/static/js/main.3ec81521.js",
     "static/js/453.0b30a3d5.chunk.js": "/cinewood/static/js/453.0b30a3d5.chunk.js",
     "static/media/movies-stamp-png.png": "/cinewood/static/media/movies-stamp-png.841f6dde11a36a3e3122.png",
     "index.html": "/cinewood/index.html",
     "main.e539b1f2.css.map": "/cinewood/static/css/main.e539b1f2.css.map",
-    "main.4a928211.js.map": "/cinewood/static/js/main.4a928211.js.map",
+    "main.3ec81521.js.map": "/cinewood/static/js/main.3ec81521.js.map",
     "453.0b30a3d5.chunk.js.map": "/cinewood/static/js/453.0b30a3d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e539b1f2.css",
-    "static/js/main.4a928211.js"
+    "static/js/main.3ec81521.js"
   ]
 }
